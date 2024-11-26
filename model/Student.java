@@ -18,5 +18,13 @@ public class Student extends User{
         this.studentId = studentId;
     }
 
+    @Override
+    public String toString() { // метод выводит Id студента
+        
+        return "Student{" +
+                "studentId =" + studentId +
+                '}';
+    }
+
 
 }
