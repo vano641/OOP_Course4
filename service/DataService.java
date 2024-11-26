@@ -5,6 +5,7 @@ import model.Teacher;
 import model.Type;
 import model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataService {
@@ -44,6 +45,17 @@ public class DataService {
 // метод возвращения Списка пользователей
     public List<User> getAllUsers(){
         return userList;
+    }
+
+// метод возвращения всех Студентов
+    public List<User> getAllStudents(){
+        List<User> students = new ArrayList<>(); // список студентов
+        for (User i : userList) { // если пользователь соответствует классу Студент, то добавляем его в список
+            if (i instanceof Student) {
+                students.add(i);
+            }
+        }
+        return students;
     }
 
 
